@@ -2,6 +2,8 @@ var main = function() {
   
   
   $('.arrow-next').click(function(e) {
+     e.preventDefault();  
+    
     var currentSlide = $('.active-slide');
     var nextSlide = currentSlide.next();
 
@@ -12,7 +14,7 @@ var main = function() {
       nextSlide = $('.slide').first();
       nextDot = $('.dot').first();
     
-    e.preventDefault();  
+   
     }
     
     currentSlide.fadeOut(600).removeClass('active-slide');
@@ -24,6 +26,9 @@ var main = function() {
 
 
   $('.arrow-prev').click(function(e) {
+    
+    e.preventDefault();  
+    
     var currentSlide = $('.active-slide');
     var prevSlide = currentSlide.prev();
 
@@ -34,7 +39,7 @@ var main = function() {
       prevSlide = $('.slide').last();
       prevDot = $('.dot').last();
     
-    e.preventDefault();  
+    
     }
     
     currentSlide.fadeOut(600).removeClass('active-slide');
